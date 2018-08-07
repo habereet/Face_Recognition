@@ -1,6 +1,8 @@
 import cv2
 import sys
 
+# Based on and modifed from https://realpython.com/face-recognition-with-python/
+
 from config import CASCPATH
 
 faceCascade = cv2.CascadeClassifier(CASCPATH)
