@@ -33,12 +33,11 @@ for file in sys.argv[1:]:
 	)
 
 	# Output the number of faces found in the image
-	print("Found " + str(len(faces)) + " faces in " + file)
-
+	print(f"Found {len(faces)} face{'' if len(faces) == 1 else 's'} in {file}")
 
 	for (x, y, w, h) in faces:
 		# Draw a rectangle around each face
-		#   Look for more information on this
+		#   Look for more information on rectangle
 		cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
 	# Display the image
